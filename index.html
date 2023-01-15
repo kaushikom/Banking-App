@@ -8,6 +8,7 @@
     <title>Bank App</title>
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.svg">
 </head>
 
@@ -30,7 +31,38 @@
     </div>
     <main>
         <div class="header"></div>
-        <div class="second_row"></div>
+        <div class="second_row">
+            <div class="balance"></div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card__front card__part">
+                        <img class="card__front-square card__square" id="sq"
+                            src="./images/credit-card-chip-svgrepo-com.svg">
+                        <img class="card__front-logo card__logo" id="visa" src="./images/visa-card.svg">
+                        <p class="card_numer">**** **** **** 6996</p>
+                        <div class="card__space-75">
+                            <span class="card__label">Card holder</span>
+                            <p class="card__info">Ironman</p>
+                        </div>
+                        <div class="card__space-25">
+                            <span class="card__label">Expires</span>
+                            <p class="card__info">10/25</p>
+                        </div>
+                    </div>
+                    <div class="card__back card__part">
+                        <div class="card__black-line"></div>
+                        <div class="card__back-content">
+                            <div class="card__secret">
+                                <p class="card__secret--last">185</p>
+                            </div>
+                            <img class="card__back-square card__square" id="sq"
+                                src="./images/credit-card-chip-svgrepo-com.svg">
+                            <img class="card__back-logo card__logo" id="visa" src="./images/visa-card.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="services">
             <h2>Services</h2>
             <div class="s_options">
