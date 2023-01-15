@@ -80,3 +80,25 @@ justify-content: space-between;
 .second_row > .balance{
     width: 40%;
 }
+.b-card{
+    margin-left: auto;
+    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    width: 320px;
+    height: 190px;
+    border-radius: 8px;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.452);
+    color: rgb(244, 244, 254);
+    font-family: 'Passion One', sans-serif;
+}
+.b-card h2{
+    font-size: 2.5rem;
+    font-weight: 100;
+    padding-top: 0.5em;
+}
+.b-card h2,h3{
+    padding-left: 1.5rem;
+}
+.b-card h3{
+    font-size: 2em;
+    margin-top: 1em;
+}
