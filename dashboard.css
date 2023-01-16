@@ -82,3 +82,46 @@ display: flex;
     outline: 3px solid #001b52;
     scale: 1.1;
 }
+
+.header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#date{
+    text-align: center;
+    width:10%;
+    height:45%;
+    font-size: 20px;
+    font-weight: 700;
+    font-family:'Lobster Two', cursive;
+}
+
+#time{
+    text-align: center;
+    width:10%;
+    height:45%;
+    font-size: 20px;
+    font-weight: 700;
+    font-family:'Lobster Two', cursive;
+}
+#help{
+    width:10%;
+    height:50%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family:'Lobster Two', cursive;
+    border: 2px solid black;
+}
+#help:hover{
+    color:white;
+    background-color: black;
+}
