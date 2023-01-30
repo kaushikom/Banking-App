@@ -102,13 +102,87 @@ justify-content: space-between;
     font-size: 2em;
     margin-top: 1em;
 }
+/* styling the mystyle class */
+#dashboard.mystyle, #main_section.mystyle{
+    filter: blur(5px);
+    pointer-events: none; /* user can't click again on that button*/
+    user-select: none;/* can't select anything or can't copy anything */
+}
+/* Styling start of deposit */
+#popup_deposit, #popup_withdraw,#popup_edit{
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 250px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow:  0 5px 30px rgba(0, 0 , 0 ,.30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#popup_deposit.mystyle,#popup_withdraw.mystyle, #popup_edit.mystyle {
+visibility: visible;
+opacity: 1;
+transition: .5s;
+}
+/* Styling here of the popup deposit,withdraw,edit */
+#deposit_span1, #withdraw_span1, #edit_span1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: bolder;
+}
+#text_deposit,#text_withdraw,#text_edit{
+    border-radius: 5px;
+    width: 90%;
+    outline: none;
+    border: 1px solid rgba(129, 126, 126, 0.3) ;
+    padding: 2px;
+    font-weight: 600;
+    box-shadow:  -5px 5px 5px rgba(129, 126, 126, 0.3);
+}
+#deposit_span2,#withdraw_span2, #edit_span2{
+    text-align: center;
+    font-size: 12px;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#deposit_button,#withdraw_button, #edit_button {
+    cursor: pointer;
+    width: 60%;
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: rgb(15, 156, 7);
+}
+#withdraw_button{
+    background-color: rgb(255, 179, 0);
+}
+#edit_button {
+    background-color: rgb(0, 170, 255);
+}
+
+/* Styling ended of deposit,withdraw,edit */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 .s_screen_error{
 display:none;
 font-family: 'Roboto Slab', serif; 
 }
 @media(max-width:1100px){
-body > *, .dashboard {
+body > *, #dashboard {
 display : none;
 }
 .s_screen_error{
