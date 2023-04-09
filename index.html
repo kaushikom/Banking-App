@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="dashboard">
+    <div id="dashboard">
         <div class="greetings">
             <h2>Hi,</h2>
             <span id="user-name">Om </span>
@@ -29,7 +29,7 @@
             <div class="option"><img src="./images/services-svgrepo-com.svg" alt="">Services</div>
         </div>
     </div>
-    <main>
+    <main id="main_section">
         <div class="header">
             <span id="date">15 Jan 2023</span>
             <span id="time"></span>
@@ -39,7 +39,7 @@
             <div class="balance">
                 <div class="b-card">
                     <h2>Total Balance :</h2>
-                    <h3><span>&#8377;</span><span> 1,00,000</span></h3>
+                    <h3><span>&#8377; </span><span id="balance"> 1000</span></h3>
                 </div>
             </div>
             <div class="card-container">
@@ -75,16 +75,37 @@
         <div class="services">
             <h2>Services</h2>
             <div class="s_options">
-                <div class="s_option"><img src="./images/add-money.svg" alt=""><span>Deposit</span></div>
-                <div class="s_option"><img src="./images/withdraw.svg" alt=""><span>Withdraw</span></div>
-                <div class="s_option"><img src="./images/edit-ui-svgrepo-com.svg" alt=""><span>Edit</span></div>
+                <div class="s_option" onclick="blur_dashboard()"><img src="./images/add-money.svg" alt=""><span>Deposit</span></div>
+                <div class="s_option" onclick="blur_withdraw()"><img src="./images/withdraw.svg" alt=""><span>Withdraw</span></div>
+                <div class="s_option" onclick="blur_edit()"><img src="./images/edit-ui-svgrepo-com.svg" alt=""><span>Edit</span></div>
             </div>
         </div>
     </main>
+    <div id="popup_deposit">
+        <span id="deposit_span1">Enter amount to deposit</span>
+         <input type="number" name="number" min = "100" max="10,00,000"  id="text_deposit" required /><!--When taking the value from the text convert it to the num by parseInt method -->
+        <span id="deposit_span2">(Enter a number between 100-10,00,000)</span>
+        <button id="deposit_button" onclick="blur_dashboard(),UpdateBalance() ">Deposit</button>
+        </div>
+        <div id="popup_withdraw">
+            <span id="withdraw_span1">Enter amount to withdraw</span>
+         <input type="number" name="number" min = "100" max="10,00,000"  id="text_withdraw" required /><!--When taking the value from the text convert it to the num by parseInt method -->
+        <span id="withdraw_span2">(Enter a number between 100-10,00,000)</span>
+        <button id="withdraw_button" onclick="blur_withdraw(),UpdateWithdraw()">Withdraw</button>
+        </div>
+        <div id="popup_edit">
+            <span id="edit_span1">Enter new username</span>
+         <form><input type="text" name="text" value="Hitesh" id="text_edit" required /></form>
+        <span id="edit_span2">(Include at least one uppercase and one lowercase letter)</span>
+        <button id="edit_button" onclick="blur_edit(),UpdateName()">Edit</button>
+        </div>
     <div class='s_screen_error'>
         <span id='s_screen_error_text'>Please open this webpage in a bigger window.</span>
     </div>
     <script src="time-date.js"></script>
+    <script src="popup_function.js"></script>
+    <script src="data_update.js"></script>
+   
 </body>
 
 </html>
