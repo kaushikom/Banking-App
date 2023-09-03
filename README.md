@@ -1,3 +1,3 @@
 # Banking-App
 
-[Live Link](https://omkaushik71.github.io/Banking-App/)
+[Live Link](https://kaushikom.github.io/Banking-App/)
